@@ -33,18 +33,14 @@
     props: [
       'item', 'index'
     ],
-    // 数据模型
-    data () {
-      return {
-        msg: ''
-      }
-    },
     // 方法
     methods: {
       toDetail () {
         // 跳转到详情页 + 传参过去
         // wx.navigateTo( { url : '/pages/detail/main?index=' + this.index } );
-        wx.navigateTo({ url: '../detail/main?index=' + this.index })
+        wx.navigateTo({
+          url: '/pages/detail/main?index=' + this.index
+        })
       }
 
     },
