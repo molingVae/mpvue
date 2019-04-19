@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div @tap="toDetail(index)"   v-for="(item,index) in moviesArr" class="moviesContainer">
+    <div @tap="toDetail(index)" :key="index" v-for="(item,index) in moviesArr" class="moviesContainer">
       <img class="movies_img"
            :src="item.images.large"
            alt="">
@@ -39,7 +39,7 @@ export default {
     methods: {
       toDetail (index) {
         wx.navigateTo({
-          url: '/pages/moviesDetail/main?index='+index
+          url: '/pages/moviesDetail/main?index=' + index
         })
       }
     }

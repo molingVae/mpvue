@@ -28,7 +28,9 @@
       ...mapState(['moviesArr'])
     },
     beforeMount () {
-      this.index=
+      // this.index=
+      this.movieDetail = this.moviesArr[this.$mp.query.index]
+      console.log(this.movieDetail)
     }
   }
 </script>
